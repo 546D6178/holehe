@@ -156,7 +156,7 @@ def export_csv(data,args,email):
     if args.csvoutput == True:
         now = datetime.now()
         timestamp = datetime.timestamp(now)
-        name_file="holehe_"+str(round(timestamp))+"_"+email+"_results.csv"
+        name_file="holehe_"+email+"_results.csv"
         with open(name_file, 'w', encoding='utf8', newline='') as output_file:
             fc = csv.DictWriter(output_file,fieldnames=data[0].keys())
             fc.writeheader()
